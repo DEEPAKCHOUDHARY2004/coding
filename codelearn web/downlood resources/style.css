@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+
+.heading{
+  color: white;
+margin-top:16px;
+align-items: center;
+text-shadow: 2px 2px 4px #000000;
+}
+#boxcard{
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.lightbtn a:hover{
+  background-color: grey;
+
+}
