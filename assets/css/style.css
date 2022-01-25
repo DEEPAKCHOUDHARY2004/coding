@@ -3234,3 +3234,16 @@ p.copyright {
     visibility: hidden;
   }
 }
+
+#mapmarker{
+  font-size:38px;
+  color:red;
+}
+#mapmarker a:hover{
+  color: #33ff00;
+
+
+}
+.fa fa-map-marker{
+  color: #0011fc;
+}
