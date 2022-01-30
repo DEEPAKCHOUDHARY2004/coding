@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>www.codeland.com</title>
   <!-- link html -->
+   <link href="./contectformhandler.php" rel="php">
   <link href="C:\Users\CAANAND\Downloads\Salient Free Website Template - Free-CSS.com\codelearn web\webIQ - Responsive cards pure html and css\index.html" rel="stylsheet">
   <!-- icon-bar -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -1062,24 +1063,23 @@
               <div class="col-md-8 col-md-offset-2">
                 
                 <!-- form fields -->
-                <form action="assets/php/contact.php.htm" method="post" name="contactform" id="contactform" class="animated out" data-animation="fadeInUp" data-delay="0">
+                <form action="./sendmail.php" method="post" name="contactform" id="contactform" class="animated out" data-animation="fadeInUp" data-delay="0">
 
                   <fieldset>
                     <div class="form-group">
-                      <input class="form-control br-b" type="text" name=" First Name" id="name" placeholder="First Name">
+                      <input class="form-control br-b" type="text" name=" name" id="name" placeholder="Name">
                     </div>
+                    
                     <div class="form-group">
-                      <input class="form-control br-b" type="text" name=" Last Name" id="name" placeholder="Last Name">
-                    </div>
-                    <div class="form-group">
-                      <label for="country">Country</label>
+                      <!-- <label for="country">Country</label>
                     <select id="country" name="country">
                       <option value="australia">Australia</option>
                       <option value="canada">Canada</option>
                       <option value="usa">USA</option>
                       <option value="India">India</option>
-                    </select>
-                  </div>
+                    </select> -->
+                  
+                      </div>
 
                     <div class="form-group">
                       <input class="form-control br-b" type="email" name="email" id="email" placeholder="Email">
