@@ -43,7 +43,8 @@
 
   <!-- Magnific-Popup CSS Style -->
   <link rel="stylesheet" href="assets/css/magnific-popup/magnific-popup.css">
-
+<!-- //cdnjs -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   
 	
 </head>
@@ -1063,36 +1064,38 @@
               <div class="col-md-8 col-md-offset-2">
                 
                 <!-- form fields -->
-                <form action="./sendmail.php" method="post" name="contactform" id="contactform" class="animated out" data-animation="fadeInUp" data-delay="0">
+                <form form action="javascript:sendmail()" method="post" name="contactform" id="contactform" class="animated out" data-animation="fadeInUp" data-delay="0">
 
                   <fieldset>
                     <div class="form-group">
-                      <input class="form-control br-b" type="text" name=" name" id="name" placeholder="Name">
+                      <input class="form-control br-b" type="text" name="Name" id="Name" placeholder="Name">
                     </div>
                     
-                    <div class="form-group">
-                      <!-- <label for="country">Country</label>
+                    <!-- <div class="form-group">
+                       <label for="country">Country</label>
                     <select id="country" name="country">
                       <option value="australia">Australia</option>
                       <option value="canada">Canada</option>
                       <option value="usa">USA</option>
                       <option value="India">India</option>
-                    </select> -->
+                    </select>
                   
-                      </div>
+                      </div>  -->
 
                     <div class="form-group">
-                      <input class="form-control br-b" type="email" name="email" id="email" placeholder="Email">
+                      <input class="form-control br-b" type="email" name="Sender" id="Sender" placeholder="Email">
                     </div>
-
                     <div class="form-group">
-                      <textarea class="form-control br-b" name="message" id="message" placeholder="Message..."></textarea>
+                      <input type="text" class="form-control br-b" name="Subject" id="Subject" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control br-b" name="Message" id="Message" placeholder="Message..."></textarea>
                     </div>
                   </fieldset>
                   
                   <!-- submit button -->
                   <div class="form-group">
-                    <input type="submit" name="submit" value="Send message" id="submit" class="btn btn-sm btn-dark">
+                    <input type="submit" name="Send" value="Send message" id="submit" class="btn btn-sm btn-dark">
                   </div>
 
                   <div id="alert"></div>
@@ -1107,6 +1110,51 @@
 
       </div> <!-- End contact-section -->
     </section>
+    <script>  
+
+      function sendmail(){
+     
+       var name = $('#Name').val();
+       var email = $('#Sender').val();
+       var subject = $('#Subject').val();
+       var message = $('#Message').val();
+ 
+       // var body = $('#body').val();
+ 
+       var Body='Name: '+name+'<br>Email: '+email+'<br>Subject: '+subject+'<br>Message: '+message;
+       //console.log(name, phone, email, message);
+ 
+       Email.send({
+        Host:"smtp.mailtrap.io",
+        port:587,
+          Username:"ccef4c72c26013",
+          Password:"c1865addcb4d3d",
+         To: email,
+         From: "deepak.livechek1999@gmail.com",
+         Subject: "New message on contact from "+name,
+         Body: Body
+       }).then(
+         message =>{
+           //console.log (message);
+           if(message=='OK'){
+           alert('Your mail has been send. Thank you for connecting.');
+           }
+           else{
+             console.error (message);
+             alert('There is error at sending message. ')
+             
+           }
+ 
+         }
+       );
+ 
+ 
+ 
+     }
+ 
+ 
+     </script>
+  
 
     <!-- Contact-info
     ================================================== -->
@@ -1193,5 +1241,9 @@
   <script src="assets/js/jquery.gmaps.js"></script>
   <script src="assets/js/main.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+ 
+
 </body>
 </html>
