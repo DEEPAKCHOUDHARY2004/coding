@@ -11,14 +11,21 @@
 
 <body class="bg-purple-100">
     <!-- ----------------------------------------------------Navbar--------------------------------------------------------- -->
-    <nav class="md:px-5 md:py-4    flex px-5 py-4 bg-purple-900 text-white justify-end">
-        <h4 class=" absolute md:left-20    hover:text-gray-300 cursor-pointer left-20">Code land</h4>
-        <ul class="flex px-5 md:gap-4 gap-2">
-            <li class="md:text-base mx-2 md:cursor-pointer hover:text-gray-300 md">Home</li>
-            <li class="md:text-base mx-2 md:cursor-pointer hover:text-gray-300 text-md">About</li>
-            <li class=" md:text-base mx-2 md:cursor-pointer hover:text-gray-300 text-md">Follow Us</li>
-            <li class=" md:text-base mx-2 md:cursor-pointer hover:text-gray-300 text-md">About Us</li>
+    <nav class="md:px-5 md:py-4   px-2 py-3 bg-purple-900 text-white h-fit">
+
+        <div class="flex justify-start w-full h-0 items-center">        
+            <h4 class="mt-5 hover:text-gray-300 cursor-pointer text-sm translate-x-10">Code land</h4>
+        </div>
+
+        <div class="flex justify-end ">
+            <ul class="flex md:gap-4">
+            <li class="md:text-base mx-2 md:cursor-pointer hover:text-gray-300 text-sm w-fit">Home</li>
+            <li class="md:text-base mx-2 md:cursor-pointer hover:text-gray-300 text-sm">About</li>
+            <li class=" md:text-base mx-2 md:cursor-pointer hover:text-gray-300 text-sm w-fit">Follow Us</li>
+            <li class=" md:text-base mx-2 md:cursor-pointer hover:text-gray-300 text-sm">About Us</li>
         </ul>
+    </div>
+        
     </nav>
       <!-- ----------------------------------------------------Navbar--------------------------------------------------------- -->
 
@@ -30,11 +37,11 @@
 
 
         <h1
-            class="xl:translate-y-36 xl:text-6xl lg:text-5xl lg:translate-y-28 md:translate-y-32 md:left-10 md:text-4xl    translate-x-7 h-fit translate-y-32 left-5 font-bold text-[1.6rem] text-orange-800 subpixel-antialiased ">
+            class="xl:translate-y-36 xl:text-6xl lg:text-5xl lg:translate-y-28 md:translate-y-32 md:left-10 md:text-4xl    translate-x-7 h-fit translate-y-32 left-3 font-bold text-[1.6rem] text-orange-800 subpixel-antialiased ">
             Welcome to Code Land</h1>
 
         <h1
-            class="xl:translate-y-60 xl:text-6xl lg:text-5xl  md:text-4xl   translate-x-2 absolute h-fit translate-y-44 left-5 font-bold text-[1.6rem]  text-orange-800 subpixel-antialiased ">
+            class="xl:translate-y-60 xl:text-6xl lg:text-5xl  md:text-4xl   translate-x-2 absolute h-fit translate-y-44 left-3 font-bold text-[1.6rem]  text-orange-800 subpixel-antialiased ">
             Learn HTML 5</h1>
 
         <button type="button"
@@ -48,7 +55,10 @@
     <!-- ----------------------------------------------------HTML------------------------------------------------------------->
     <section class="flex flex-col h-fit w-full items-start lg:items-center">
         <h2 class="lg:ml-24 md:ml-16 sm:ml-14 mt-8  ml-4 text-3xl font-bold">Introduction to HTML?</h2>
-        <div class="flex justify-center w-fit"><ul class="list-disc">
+
+        <!-- ----------LIST ITEM ------------>
+        <div class="flex justify-center w-fit">
+            <ul class="list-disc">
             <li class=" ml-10 mt-5">HTML is the standard markup language for creating Web
                 pages.</li>
             <li class=" ml-10 mt-2">HTML stands for Hyper Text Markup Language</li>
@@ -63,9 +73,12 @@
                 link", etc.</li>
         </ul>
     </div>
+    <!-- ----------LIST ITEM ------------>
 
         <h2 class="mt-8 mb-2 text-3xl font-bold ml-12">A Simple Program</h2>
         <div class="sm:w-[27rem] drop-shadow-2xl bg-white border-solid border-2 rounded-lg border-white-100 w-fit mx-auto px-5 py-5 ">
+
+    <!-- DONT FORMAT THE DOUMENT -->
             <xmp class="sm:text-lg">
 <!DOCTYPE html>
   <html>
@@ -77,6 +90,7 @@
       <p>My first paragraph.</p>
     </body>
   </html></xmp>
+  <!-- DONT FORMAT THE DOUMENT -->
         </div>
         <h2 class="mt-2 mb-2 text-2xl font-bold ml-12">Output</h2>
         <div class="sm:w-[27rem] border-solid border-2 bg-white rounded-lg border-white-100 w-[17rem] mx-auto px-6 py-6">
@@ -85,7 +99,26 @@
         </div>
     </section>
    <!-- ----------------------------------------------------HTML------------------------------------------------------------->
+   <!-- ---------------------------------------------Example Explained------------------------------------------------------->
+   <div class="flex justify-center">
+       <h2 class="text-2xl font-bold mt-5">Example Exaplained</h2>
+       <ul>
+           <li>The <xmp><!DOCTYPE html></xmp> declaration defines that this document is an HTML5 document</li>
 
+           <li>The <xmp><html></html></xmp> element is the root element of an HTML page</li>
+
+           <li>The <xmp><head></head></xmp> element contains meta information about the HTML page</li>
+
+           <li>The <xmp><title></title></xmp> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)</li>
+
+           <li>The <xmp><body></body></xmp> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.</li>
+
+           <li>The <xmp><h1></h1></xmp> element defines a large heading</li>
+
+           <li>The <xmp><p></p></xmp> element defines a paragraph</li>
+       </ul>
+    </div>
+   
 </body>
 
 </html>
