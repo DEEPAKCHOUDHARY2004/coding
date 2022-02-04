@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.animation-fade-out{
+    animation: animation-fade-out 1s ease-out;
+}
+@keyframes animation-fade-out{
+    0%{opacity:0;transform:translateX(-100px);}
+    100%{opacity:1;transform:translateX(0);}
+    }
+.animation-fade-out1{
+    animation: animation-fade-out1 1s ease-out 0.2s;
+}
+@keyframes animation-fade-out1{
+    0%{opacity:0;transform:translateX(-100px);}
+    100%{opacity:1;transform:translateX(0);}}
